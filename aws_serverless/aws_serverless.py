@@ -38,7 +38,7 @@ class AwsBedrockLangchainPythonCdkStack(Stack):
         bedrock_fn = _alambda.PythonFunction(
             self,
             "BedrockInferenceFn",
-            entry="./aws_bedrock_langchain_python_cdk/lambda/code/boto3/",
+            entry="./aws_serverless/lambda/code/boto3/",
             index="index.py",
             handler="lambda_handler",
             runtime=_lambda.Runtime.PYTHON_3_11,

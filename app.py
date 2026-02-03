@@ -2,7 +2,7 @@
 import cdk_nag
 from aws_cdk import Aspects
 import aws_cdk as cdk
-from aws_bedrock_langchain_python_cdk.aws_serverlesss import AwsBedrockLangchainPythonCdkStack
+from aws_serverless.aws_serverless import AwsBedrockLangchainPythonCdkStack
 
 app = cdk.App()
 aws_bedrock_langchain_stack = AwsBedrockLangchainPythonCdkStack(app, "AwsBedrockLangchainPythonCdkStack",)
