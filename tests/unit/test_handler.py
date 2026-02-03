@@ -17,7 +17,11 @@ class TestLambdaHandler(unittest.TestCase):
     def test_handler_success(self, mock_bedrock):
         # Setup mock response
         mock_response_body = json.dumps({
-            'results': [{'outputText': 'Hello world'}]
+            'output': {
+                'message': {
+                    'content': [{'text': 'Hello world'}]
+                }
+            }
         })
         mock_bedrock.invoke_model.return_value = {
             'body': MagicMock(read=lambda: mock_response_body)
