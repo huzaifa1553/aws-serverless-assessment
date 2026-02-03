@@ -8,7 +8,7 @@ import sys
 os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
 
 # Add lambda directory to path to import index
-sys.path.append(os.path.abspath("aws_bedrock_langchain_python_cdk/lambda/code/boto3"))
+sys.path.append(os.path.abspath("aws_serverless/lambda/code/boto3"))
 import index
 
 class TestLambdaHandler(unittest.TestCase):
